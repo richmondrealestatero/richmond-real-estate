@@ -922,3 +922,198 @@ small {
   border: none;
   box-shadow: none;
 }
+/* =========================
+   MOBILE RESPONSIVE FIXES
+========================= */
+
+@media (max-width: 1100px) {
+
+  .brand-rail {
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    bottom: auto;
+    width: auto;
+    height: 88px;
+  }
+
+  .brand-rail:hover,
+  .brand-rail.open {
+    width: auto;
+    height: 420px;
+  }
+
+  .brand-logo {
+    top: 18px;
+    left: 22px;
+    width: 90px;
+  }
+
+  .menu-button {
+    top: 16px;
+    right: 20px;
+    left: auto;
+    width: 56px;
+    height: 56px;
+  }
+
+  .drawer-menu {
+    top: 110px;
+    width: 100%;
+  }
+
+  .hero-content {
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 120px;
+  }
+
+  .section-inner {
+    padding: 110px 7%;
+  }
+
+  .house-grid,
+  .project-layout,
+  .values-grid,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .hero-content {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 140px;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(3,11,22,.70) 0%, rgba(3,11,22,.78) 50%, rgba(3,11,22,.95) 100%);
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: .98;
+    letter-spacing: -1px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 1.05;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+  }
+
+  .hero-subtitle {
+    font-size: 21px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  .section-inner {
+    padding: 95px 24px;
+  }
+
+  .section-text {
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+  .house-grid {
+    gap: 20px;
+  }
+
+  .card-image,
+  .coming-soon {
+    height: 240px;
+  }
+
+  .card-content {
+    padding: 26px;
+  }
+
+  .mini-specs {
+    flex-direction: column;
+  }
+
+  .spec-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-strip div {
+    border-right: none;
+    border-bottom: 1px solid rgba(216,181,108,.18);
+  }
+
+  .project-gallery,
+  .project-visuals,
+  .visual-set {
+    min-height: auto;
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project-gallery img {
+    height: auto;
+  }
+
+  .project-info {
+    padding: 24px;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab-button {
+    width: 100%;
+  }
+
+  .price-boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card,
+  .contact-form {
+    padding: 26px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
