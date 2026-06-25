@@ -49,3 +49,25 @@ const revealObserver = new IntersectionObserver(entries => {
 revealElements.forEach(element => {
   revealObserver.observe(element);
 });
+// LIGHTBOX GALLERY
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxClose = document.getElementById("lightboxClose");
+
+document.querySelectorAll(".project-visuals img, .project-gallery img").forEach(image => {
+  image.addEventListener("click", () => {
+    lightbox.classList.add("active");
+    lightboxImage.src = image.src;
+  });
+});
+
+lightboxClose.addEventListener("click", () => {
+  lightbox.classList.remove("active");
+});
+
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    lightbox.classList.remove("active");
+  }
+});

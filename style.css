@@ -1117,3 +1117,56 @@ small {
     font-size: 16px;
   }
 }
+/* LIGHTBOX GALLERY */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  background: rgba(3, 11, 22, 0.92);
+  backdrop-filter: blur(18px);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 92vw;
+  max-height: 88vh;
+
+  object-fit: contain;
+
+  border: 1px solid rgba(216, 181, 108, 0.35);
+  box-shadow: 0 0 60px rgba(0,0,0,.45);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 28px;
+  right: 34px;
+
+  width: 54px;
+  height: 54px;
+
+  border: 1px solid rgba(216, 181, 108, 0.45);
+  background: rgba(255,255,255,.04);
+  color: #d8b56c;
+
+  font-size: 36px;
+  cursor: pointer;
+
+  transition: .3s ease;
+}
+
+.lightbox-close:hover {
+  background: #d8b56c;
+  color: #071c36;
+}
