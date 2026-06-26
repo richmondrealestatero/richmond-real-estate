@@ -9,7 +9,11 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<script>
+emailjs.init("hjy9dX_bTOJ4JcGoc");
+</script>
 <body>
 
   <!-- FIXED BRAND / SIDE MENU -->
@@ -35,7 +39,7 @@
 
       <a href="#" class="small-link">Instagram</a>
       <a href="#" class="small-link">Facebook</a>
-      <a href="#" class="small-link">WhatsApp</a>
+      <a href="https://wa.me/40752682723" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
     </nav>
   </aside>
 
@@ -361,37 +365,62 @@
             </div>
           </div>
 
-          <form class="contact-form">
-            <label>
-              Nume
-              <input type="text" placeholder="Numele tău">
-            </label>
+          <form class="contact-form" id="contactForm">
 
-            <label>
-              Telefon
-              <input type="tel" placeholder="Număr de telefon">
-            </label>
+  <label>
 
-            <label>
-              Casă de interes
-              <select>
-                <option>Casa Clara</option>
-                <option>Casa Nova</option>
-                <option>Casa Aura</option>
-              </select>
-            </label>
+    Nume
 
-            <label>
-              Mesaj
-              <textarea placeholder="Scrie mesajul tău"></textarea>
-            </label>
+    <input type="text" name="name" placeholder="Numele tău" required>
 
-            <button type="button" class="btn-primary">
-              Trimite mesaj
-            </button>
+  </label>
 
-            <small>Formular demo. La publicare îl conectăm la email sau WhatsApp.</small>
-          </form>
+  <label>
+
+    Telefon
+
+    <input type="tel" name="phone" placeholder="Număr de telefon" required>
+
+  </label>
+
+  <label>
+
+    Email
+
+    <input type="email" name="email" placeholder="Adresa ta de email" required>
+
+  </label>
+
+  <label>
+
+    Casă de interes
+
+    <select name="house">
+
+      <option>Casa Clara</option>
+      <option>Proiect nou</option>
+
+    </select>
+
+  </label>
+
+  <label>
+
+    Mesaj
+
+    <textarea name="message" placeholder="Scrie mesajul tău" required></textarea>
+
+  </label>
+
+  <button type="submit" class="btn-primary" id="sendButton">
+
+    Trimite mesaj
+
+  </button>
+
+  <small id="formStatus">Completează formularul și revenim cu detalii.</small>
+
+</form>
 
         </div>
       </div>
@@ -402,6 +431,10 @@
   <button class="lightbox-close" id="lightboxClose">×</button>
   <img src="" alt="Imagine mărită" id="lightboxImage">
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("hjy9dX_bTOJ4JcGoc");
+</script>
   <script src="script.js"></script>
 </body>
 </html>

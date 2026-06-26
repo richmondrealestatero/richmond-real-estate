@@ -71,3 +71,29 @@ lightbox.addEventListener("click", (event) => {
     lightbox.classList.remove("active");
   }
 });
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
+const sendButton = document.getElementById("sendButton");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    sendButton.textContent = "Se trimite...";
+    sendButton.disabled = true;
+    formStatus.textContent = "Te rugăm să aștepți câteva secunde.";
+
+    emailjs.sendForm("service_5vjc1qb", "template_fqxrnot", contactForm)
+      .then(() => {
+        formStatus.textContent = "Mesaj trimis cu succes. Te vom contacta în curând.";
+        contactForm.reset();
+      })
+      .catch(() => {
+        formStatus.textContent = "A apărut o eroare. Te rugăm să ne contactezi pe WhatsApp.";
+      })
+      .finally(() => {
+        sendButton.textContent = "Trimite mesaj";
+        sendButton.disabled = false;
+      });
+  });
+}
