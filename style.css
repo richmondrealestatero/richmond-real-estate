@@ -1170,3 +1170,16 @@ small {
   background: #d8b56c;
   color: #071c36;
 }
+.brand-rail.open .menu-button span:first-child {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.brand-rail.open .menu-button span:last-child {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+@media (max-width: 1100px) {
+  .brand-rail.open {
+    height: 430px;
+  }
+}

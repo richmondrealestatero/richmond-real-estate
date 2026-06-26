@@ -97,3 +97,17 @@ if (contactForm) {
       });
   });
 }
+const mobileMenuButton = document.getElementById("menuButton");
+const mobileMenuPanel = document.getElementById("brandRail");
+
+if (mobileMenuButton && mobileMenuPanel) {
+  mobileMenuButton.addEventListener("click", function () {
+    mobileMenuPanel.classList.toggle("open");
+  });
+}
+
+document.querySelectorAll(".drawer-menu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenuPanel.classList.remove("open");
+  });
+});
