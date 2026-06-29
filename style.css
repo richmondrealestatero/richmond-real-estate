@@ -499,3 +499,26 @@ small { color: rgba(255,255,255,.5); }
     pointer-events: auto;
   }
 }
+@media (hover: none) and (pointer: coarse) {
+  .brand-rail:hover {
+    height: 88px !important;
+  }
+
+  .brand-rail:hover .drawer-menu {
+    opacity: 0 !important;
+    transform: translateX(-24px) !important;
+    pointer-events: none !important;
+  }
+
+  .brand-rail.open,
+  .brand-rail.open:hover {
+    height: 560px !important;
+  }
+
+  .brand-rail.open .drawer-menu,
+  .brand-rail.open:hover .drawer-menu {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    pointer-events: auto !important;
+  }
+}
