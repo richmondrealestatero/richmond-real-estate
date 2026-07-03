@@ -23,8 +23,17 @@ a { color: inherit; text-decoration: none; }
   transition: width .55s cubic-bezier(.22,1,.36,1), height .45s ease;
 }
 .brand-rail:hover, .brand-rail.open { width: 330px; }
-.brand-logo { position: absolute; top: 8px; left: 24px; width: 150px; z-index: 3; }
-.brand-logo img { width: 100%; max-width: none; height: auto }
+.brand-logo {
+  position:relative;
+  top: auto;
+  left: auto;
+  display: block;
+  width: 150px;
+  max-width: calc(100% - 24px);
+  height: auto;
+  margin: 8px auto 0;
+  z-index: 3;
+}
 .menu-button {
   position: absolute; top: 150px; left: 34px; width: 68px; height: 68px;
   border: 1px solid rgba(216,181,108,.42); background: rgba(255,255,255,.035); backdrop-filter: blur(14px);
