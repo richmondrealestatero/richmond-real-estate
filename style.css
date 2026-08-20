@@ -575,3 +575,32 @@ small { color: rgba(255,255,255,.5); }
     box-sizing: border-box;
   }
 }
+/* Fix sticky hover on mobile */
+@media (max-width: 768px) {
+
+  .brand-rail:not(.open),
+  .brand-rail:not(.open):hover {
+    left: 12px;
+    right: 12px;
+    width: auto;
+    height: 120px;
+    overflow: visible;
+  }
+
+  .brand-rail:not(.open) .brand-logo {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    width: 145px;
+    height: auto;
+    margin: 0;
+    transform: none;
+  }
+
+  .brand-rail:not(.open) .brand-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
