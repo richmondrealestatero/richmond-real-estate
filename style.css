@@ -606,7 +606,7 @@ small { color: rgba(255,255,255,.5); }
 }/* Final mobile logo adjustment */
 @media (max-width: 768px) {
   .brand-rail:not(.open) .brand-logo {
-    top: 10px;
+    top: 8px;
     width: 138px;
   }
 }
