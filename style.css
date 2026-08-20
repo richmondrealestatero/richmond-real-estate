@@ -542,7 +542,7 @@ small { color: rgba(255,255,255,.5); }
     width: auto;
     height: 110px;
     bottom: auto;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .brand-logo {
@@ -571,5 +571,7 @@ small { color: rgba(255,255,255,.5); }
     left: auto;
     width: 68px;
     height: 68px;
+    padding: 0;
+    box-sizing: border-box;
   }
 }
