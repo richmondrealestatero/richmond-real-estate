@@ -603,4 +603,10 @@ small { color: rgba(255,255,255,.5); }
     height: auto;
     max-width: 100%;
   }
+}/* Final mobile logo adjustment */
+@media (max-width: 768px) {
+  .brand-rail:not(.open) .brand-logo {
+    top: 10px;
+    width: 138px;
+  }
 }
