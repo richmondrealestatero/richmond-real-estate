@@ -588,25 +588,35 @@ small { color: rgba(255,255,255,.5); }
   }
 
   .brand-rail:not(.open) .brand-logo {
-    position: absolute;
-    top: 14px;
-    left: 20px;
-    width: 145px;
-    height: auto;
-    margin: 0;
-    transform: none;
-  }
 
-  .brand-rail:not(.open) .brand-logo img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-  }
-}/* Final mobile logo adjustment */
-@media (max-width: 768px) {
-  .brand-rail:not(.open) .brand-logo {
-    top: 8px;
-    width: 138px;
-  }
+  position: absolute;
+
+  top: 12px;
+
+  left: 20px;
+
+  width: auto;
+
+  height: 88px;
+
+  margin: 0;
+
+  transform: none;
+
+  overflow: visible;
+
+}
+
+.brand-rail:not(.open) .brand-logo img {
+
+  display: block;
+
+  width: auto;
+
+  height: 100%;
+
+  max-width: none;
+
+  object-fit: contain;
+}
 }
